@@ -19,7 +19,7 @@ function onCreate(ev) {
         } 
     });
 
-    xhr.open("POST", "http://195.50.2.67:2403/cpu");
+    xhr.open("POST", "http://ipAddres:2403/cpu");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
 }
@@ -45,7 +45,7 @@ function onRead() {
         }
     });
 
-    xhr.open("GET", "http://195.50.2.67:2403/cpu");
+    xhr.open("GET", "http://ipAddres:2403/cpu");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
 }
@@ -72,7 +72,7 @@ function onPrepareUpdate(ev){
             ids.id='uid';
         }
     });
-    xhrids.open("GET", "http://195.50.2.67:2403/cpu/");
+    xhrids.open("GET", "http://ipAddres:2403/cpu/");
     xhrids.setRequestHeader("Content-Type", "application/json");
     xhrids.send();
 }
@@ -97,7 +97,7 @@ function onUpdate(ev) {
         }
     });
 
-    xhr.open("PUT", "http://195.50.2.67:2403/cpu/"+document.getElementById("uid").value);
+    xhr.open("PUT", "http://ipAddres:2403/cpu/"+document.getElementById("uid").value);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
 }
@@ -113,7 +113,7 @@ function onDelete(ev) {
         }
     });
 
-    xhr.open("DELETE", "http://195.50.2.67:2403/cpu/"+document.getElementById("did").value);
+    xhr.open("DELETE", "http://ipAddres:2403/cpu/"+document.getElementById("did").value);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
 }
